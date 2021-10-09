@@ -1,0 +1,73 @@
+﻿@model OlwandleHotel.Models.AddEvents
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/newlwayout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>AddEvents</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EventType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EventType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaxNumAttNum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaxNumAttNum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DEventP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DEventP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NEventP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NEventP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DayLessD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NightLessD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DayGreaterD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NightGreaterD)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

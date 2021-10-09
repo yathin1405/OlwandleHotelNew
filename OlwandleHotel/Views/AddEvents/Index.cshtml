@@ -1,0 +1,89 @@
+﻿@model IEnumerable<OlwandleHotel.Models.AddEvents>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/newlwayout.cshtml";
+}
+<style>
+    body {
+        background-image: url("../../Content/img/50-Beautiful-and-Minimalist-Presentation-Backgrounds-041.jpg");
+    }
+</style>
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EventType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaxNumAttNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DEventP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NEventP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DayLessD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DayGreaterD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NightLessD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NightGreaterD)
+        </th>
+        <th>
+
+            @Html.DisplayNameFor(model => model.MDQA)
+        </th>
+<th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EventType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaxNumAttNum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DEventP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NEventP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DayLessD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DayGreaterD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NightLessD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NightGreaterD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MDQA)
+        </td>
+        
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EventId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EventId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EventId })
+        </td>
+    </tr>
+}
+
+</table>

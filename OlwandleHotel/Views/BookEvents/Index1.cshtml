@@ -1,0 +1,112 @@
+﻿@model IEnumerable<OlwandleHotel.Models.BookEvent>
+
+@{
+    ViewBag.Title = "Index1";
+    Layout = "~/Views/Shared/newlwayout.cshtml";
+}
+<style>
+    body {
+        background-image: url("../../Content/img/50-Beautiful-and-Minimalist-Presentation-Backgrounds-041.jpg");
+    }
+</style>
+<h2>Index1</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.addevents.EventType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumAtt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dduration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nduration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CheckoutDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DayDiscount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DayBasicCost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NightDiscount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NightBasicCost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalAmount)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.addevents.EventType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumAtt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dduration)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nduration)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CheckoutDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DayDiscount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DayBasicCost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NightDiscount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NightBasicCost)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalAmount)
+        </td>
+        
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Email }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Email }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Email })
+        </td>
+    </tr>
+}
+
+</table>

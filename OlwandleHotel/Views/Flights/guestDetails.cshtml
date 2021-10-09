@@ -1,0 +1,159 @@
+﻿@model IEnumerable<OlwandleHotel.Models.Flight>
+
+@{
+    ViewBag.Title = "guestDetails";
+}
+
+<h2>guestDetails</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Airways)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FROM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SeatType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Departure_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DepartureTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Return_Flight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Return_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Return_Time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumAdults)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumAChild)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Seat_Type_Calc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Airline_Fee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReturnTicket_Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.passenger_Cost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Num_Pass)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Add_Flight_Delay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Available_Seats)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEAT)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Airways)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FROM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SeatType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Departure_Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DepartureTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Return_Flight)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Return_Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Return_Time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumAdults)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumAChild)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Seat_Type_Calc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Airline_Fee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReturnTicket_Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.passenger_Cost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Num_Pass)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Add_Flight_Delay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Available_Seats)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEAT)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.FlightID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.FlightID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.FlightID })
+        </td>
+    </tr>
+}
+
+</table>

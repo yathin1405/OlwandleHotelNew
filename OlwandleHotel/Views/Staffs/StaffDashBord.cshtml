@@ -1,0 +1,60 @@
+﻿@model OlwandleHotel.Models.Staff
+@{
+    ViewBag.Title = "StaffsDashBord";
+}
+
+
+
+@{
+    ViewBag.Title = "StaffDashBord";
+    Layout = "~/Views/Shared/newlwayout.cshtml";
+}
+<style>
+    .nopadinghor{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    .dshline {
+        border-radius: 1px;
+        border-bottom-color: #2c3832;
+        border-bottom-width: 5px;
+         border-bottom-style: solid;
+         width:-moz-available;
+    }
+
+</style>
+
+
+
+<section class="margin-bottom-sm">
+    <div class="container-fluid">
+        <div class="row d-flex align-items-stretch">
+            <div style="box-shadow: 0px 0px 9px -5px rgba(33, 170, 11, 0.5);" class="col-lg-4 nopadinghor" >
+                <div class="stats-with-chart-1 block">
+                    <div class="title"> <strong class="d-block">Staff Details:</strong><span class="d-block">@Html.DisplayFor(model => model.Title) @Html.DisplayFor(model => model.FName)  @Html.DisplayFor(model => model.MName) @Html.DisplayFor(model => model.LName) </span></div>
+                    <div class="row d-flex align-items-end justify-content-between">
+                        <div class="col-5">
+                            <div class="text"><strong class="d-block dashtext-1">Contacts</strong><span class="d-block">Email: @Html.DisplayFor(model => model.Email)</span></div>
+                            @*<div class="text"><strong class="d-block dashtext-3">$740</strong><span class="d-block">May 2017</span><small class="d-block">320 Sales</small></div>*@
+                        </div>
+                        <div style="padding: 4px;border: 3px solid #0d4712;margin-top: 27px;margin-right: 3px;box-shadow: 0px 0px 212px 2px rgba(33, 170, 11, 0.5);" class="text">
+                           
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+
+
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+

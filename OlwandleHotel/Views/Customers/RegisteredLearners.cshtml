@@ -1,0 +1,95 @@
+﻿@model IEnumerable<OlwandleHotel.Models.Student>
+
+@{
+    ViewBag.Title = "My Customer";
+}
+
+
+
+<section class="tm-section tm-section-3 tm-bg-purple" style="padding-top: 10%;">
+
+    <div class="container-fluid tm-section-3-inner">
+
+        <h2 class="tm-text-white tm-section-3-title">Search for my Customer</h2>
+
+       
+
+
+
+
+
+
+            <p>
+                @using (Html.BeginForm())
+                {
+                    @Html.TextBox("search") <input type="submit" value="Search" />
+
+                        @Html.ActionLink("Refresh", "RegisteredLearners")
+                }@ViewBag.Message
+                @ViewBag.msg
+            </p>
+            @if (ViewBag.Bag == null)
+            {
+                <table class="table">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.FName)
+                        </th>
+                      
+                        <th>
+                            @Html.DisplayNameFor(model => model.LName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Gender)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.IdentityNumber)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DateOfBirth)
+                        </th>
+                       
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.FName)
+                            </td>
+                         
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Gender)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.IdentityNumber)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DateOfBirth)
+                            </td>
+                           
+
+                        </tr>
+                    }
+
+                </table>
+            }
+            else
+            {
+                @ViewBag.Bag
+            }
+        </div>
+
+
+
+
+   
+</section>
+
+
+
+

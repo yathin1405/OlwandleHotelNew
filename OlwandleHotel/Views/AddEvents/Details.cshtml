@@ -1,0 +1,67 @@
+﻿@model OlwandleHotel.Models.AddEvents
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/newlwayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AddEvents</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EventType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EventType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaxNumAttNum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaxNumAttNum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DEventP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DEventP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NEventP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NEventP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DayLessD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NightLessD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DayGreaterD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NightGreaterD)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EventId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

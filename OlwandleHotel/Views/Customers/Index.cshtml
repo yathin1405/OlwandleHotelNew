@@ -1,0 +1,92 @@
+﻿@model IEnumerable<OlwandleHotel.Models.Customer>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/newlwayout.cshtml";
+}
+
+
+
+
+<div class="container-fluid tm-section tm-section-2">
+<div class="row tm-media-row">
+
+   
+    <table class="table">
+        <tr>
+
+            
+            @*<th></th>*@
+            <th colspan="5">
+                <p class="text-danger" style="color:rgba(0, 240, 0, 1);font-size:26px;">@ViewBag.ResultMessage</p>
+
+            </th>
+            @*<th></th>
+            <th></th>
+            <th></th>*@
+
+        </tr>
+
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdentityNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdentityNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gender)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.CustomerId }) |                
+                    @Html.ActionLink("Archive", "Delete", new { id = item.CustomerId })
+                </td>
+            </tr>
+        }
+
+    </table>
+    
+ 
+
+
+</div>
+</div>

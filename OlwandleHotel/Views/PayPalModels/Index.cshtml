@@ -1,0 +1,93 @@
+﻿@model IEnumerable<OlwandleHotel.Models.PayPalModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.cmd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.business)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.no_shipping)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.return)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cancel_return)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.notify_url)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.currency_code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.item_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.item_quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.amount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.actionURL)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.cmd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.business)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.no_shipping)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.return)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cancel_return)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.notify_url)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.currency_code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.item_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.item_quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.amount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.actionURL)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Pay }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Pay }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Pay })
+        </td>
+    </tr>
+}
+
+</table>

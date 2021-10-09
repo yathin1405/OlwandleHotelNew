@@ -1,0 +1,193 @@
+﻿@model OlwandleHotel.Models.Flight
+
+@{
+    ViewBag.Title = "ConfirmFlight";
+}
+
+<h2>ConfirmFlight</h2>
+
+<div>
+    <h4>Flight</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Airways)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Airways)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FROM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FROM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SeatType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SeatType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Departure_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Departure_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DepartureTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DepartureTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Return_Flight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Return_Flight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Return_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Return_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Return_Time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Return_Time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumAdults)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumAdults)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumAChild)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumAChild)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Seat_Type_Calc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Seat_Type_Calc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Airline_Fee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Airline_Fee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReturnTicket_Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReturnTicket_Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.passenger_Cost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.passenger_Cost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Num_Pass)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Num_Pass)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Add_Flight_Delay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Add_Flight_Delay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Available_Seats)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Available_Seats)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SEAT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SEAT)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("viewofvalidate", "viewofvalidate", null, new { @class = "btn btn-primary btn-large" })
+</p>
