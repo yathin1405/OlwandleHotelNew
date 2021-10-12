@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "Create";
+     Layout = "~/Views/Shared/newlwayout.cshtml";
 }
 
 <h2>Create</h2>
@@ -58,8 +59,13 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Tour_Time, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Tour_Time, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Tour_Time, "", new { @class = "text-danger" })
+                @Html.DropDownListFor(model => model.Tour_Time, new SelectListItem[]
+             {
+             new SelectListItem() { Text="06:00", Value="6:00:00"},
+             new SelectListItem() { Text="08:00", Value="8:00:00"},
+             new SelectListItem() { Text="10:00", Value="10:00:00"},
+             new SelectListItem() { Text="12:00", Value="12:00:00"},
+             }, "Select Time")
             </div>
         </div>
 

@@ -112,7 +112,7 @@ namespace OlwandleHotel.Controllers
                 db.Tours.Add(tour);
                 db.SaveChanges();
                 Session["bookID"] = tour.TourId;
-                return RedirectToAction("ConfirmFlight", new { TourId = tour.TourId });
+                return RedirectToAction("ConfirmTour", new { TourId = tour.TourId });
             }
 
             return View(tour);

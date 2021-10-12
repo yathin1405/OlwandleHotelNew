@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "ConfirmFlight";
+    Layout = "~/Views/Shared/newlwayout.cshtml";
 }
 
 <h2>ConfirmFlight</h2>
@@ -43,28 +44,28 @@
         </dd>
 
         @*<dt>
-            @Html.DisplayNameFor(model => model.FirstName)
-        </dt>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.FirstName)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.FirstName)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.LastName)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.LastName)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.LastName)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.LastName)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>*@
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>*@
 
         <dt>
             @Html.DisplayNameFor(model => model.Departure_Date)
@@ -122,7 +123,7 @@
             @Html.DisplayFor(model => model.NumAChild)
         </dd>
 
-        <dt>
+        @*<dt>
             @Html.DisplayNameFor(model => model.Seat_Type_Calc)
         </dt>
 
@@ -144,7 +145,7 @@
 
         <dd>
             @Html.DisplayFor(model => model.ReturnTicket_Price)
-        </dd>
+        </dd>*@
 
         <dt>
             @Html.DisplayNameFor(model => model.passenger_Cost)
@@ -163,31 +164,36 @@
         </dd>
 
         @*<dt>
-            @Html.DisplayNameFor(model => model.Add_Flight_Delay)
-        </dt>
+                @Html.DisplayNameFor(model => model.Add_Flight_Delay)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Add_Flight_Delay)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Add_Flight_Delay)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Available_Seats)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Available_Seats)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Available_Seats)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Available_Seats)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.SEAT)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.SEAT)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.SEAT)
-        </dd>*@
+            <dd>
+                @Html.DisplayFor(model => model.SEAT)
+            </dd>*@
 
     </dl>
 </div>
+@{
+    string url = "https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_xclick&amount=" + (100) + "&business=yathz14@gmail.com&item_name=Booking_amount&return=Page http://localhost:57531";
+}
+
 <p>
-    @Html.ActionLink("guestDetails", "guestDetails", null, new { @class = "btn btn-primary btn-large" })
+    <a href="@url" class="proceed-btn">Procees to payments</a>
+    @*@Html.ActionLink("Index", "Index", null, new { @class = "btn btn-primary btn-large" })*@
 </p>

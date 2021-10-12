@@ -72,7 +72,18 @@ else if (ViewBag.User == "Clerk")
 }
 else if (ViewBag.User == "Customer")
 {
+    <li>
+        <a href="#exampledropdownDropdown57" aria-expanded="false" data-toggle="collapse"> Make booking</a>
+        <ul id="exampledropdownDropdown57" class="collapse list-unstyled ">
+            <li><a href="@Url.Action("Create", "Quotes")">Request a Quote</a></li>
+            @*<li><a href="@Url.Action("Create", "Flights")">Flights Reservation Now</a></li>
+            <li><a href="@Url.Action("Create", "Tours")">Tours Reservation Now</a></li>
+            <li><a href="@Url.Action("Create", "Cruises")">Cruises Reservation Now</a></li>*@
 
+
+
+        </ul>
+    </li>
 
     <li>
         <a href="#exampledropdownDropdown55" aria-expanded="false" data-toggle="collapse"> Make booking</a>

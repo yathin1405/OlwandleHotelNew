@@ -119,7 +119,7 @@ namespace OlwandleHotel.Controllers
 
             return View(cruise);
         }
-        public ActionResult ConfirmFlight(int? CruiseID)
+        public ActionResult ConfirmCruise(int? CruiseID)
         {
             //if (ModelState.IsValid)
             //{

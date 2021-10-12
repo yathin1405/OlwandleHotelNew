@@ -18,6 +18,7 @@ namespace OlwandleHotel.Controllers
         // GET: Flights
         public ActionResult Index()
         {
+     
             return View(db.Flights.ToList());
         }
 
@@ -48,11 +49,12 @@ namespace OlwandleHotel.Controllers
 
         [HttpGet]
         [Authorize]
-        public ActionResult guestDetails()
+        public ActionResult guestDetail()
         {
             List<Flight> gd = new List<Flight>();
             var list = (from u in db.Users.Where(x => x.FirstName == HttpContext.User.Identity.Name)
                         join r in db.Flights on u.Email equals r.Email
+                        where u.Email==r.Email
                         //join rm in db.Rooms on r.RoomNo equals rm.RoomNo
                         //join rt in db.roomTypes on rm.RoomTypeId equals rt.RoomTypeId
                         select new
@@ -70,6 +72,7 @@ namespace OlwandleHotel.Controllers
                             r.Departure_Date,
                             r.Airline_Fee,
                             r.Airways,
+                            
 
                         }).ToList();
             foreach (var it in list)
