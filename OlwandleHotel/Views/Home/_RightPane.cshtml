@@ -73,15 +73,36 @@ else if (ViewBag.User == "Clerk")
 else if (ViewBag.User == "Customer")
 {
 
+
     <li>
-        <a href="#exampledropdownDropdown55" aria-expanded="false" data-toggle="collapse"> Reservation</a>
+        <a href="#exampledropdownDropdown55" aria-expanded="false" data-toggle="collapse"> Make booking</a>
         <ul id="exampledropdownDropdown55" class="collapse list-unstyled ">
-            <li><a href="@Url.Action("AllRooms", "Rooms")">Make Reservation Now</a></li>
-            <li><a href="@Url.Action("guestDetails", "Reservations1")">View Reservations</a></li>
+            <li><a href="@Url.Action("AllRooms", "Rooms")">Make Hotel Reservation Now</a></li>
+            <li><a href="@Url.Action("Create", "Flights")">Flights Reservation Now</a></li>
+            <li><a href="@Url.Action("Create", "Tours")">Tours Reservation Now</a></li>
+            <li><a href="@Url.Action("Create", "Cruises")">Cruises Reservation Now</a></li>
+
+
+
+        </ul>
+    </li>
+    <li>
+        <a href="#exampledropdownDropdown56" aria-expanded="false" data-toggle="collapse"> Booking History</a>
+        <ul id="exampledropdownDropdown56" class="collapse list-unstyled ">
+
+
+            <li><a href="@Url.Action("guestDetails", "Reservations1")">View Hotel Reservations</a></li>
+            <li><a href="@Url.Action("guestDetails", "Flights")">View Flights Reservations</a></li>
+            <li><a href="@Url.Action("guestDetails", "Tours")">View Tours Reservations</a></li>
+            <li><a href="@Url.Action("guestDetails", "Cruises")">View Cruises Reservations</a></li>
+
         </ul>
     </li>
 
+
+
     <li><a href="@Url.Action("Create", "RoomServices")">  Room Services </a></li>
+
 
 
 

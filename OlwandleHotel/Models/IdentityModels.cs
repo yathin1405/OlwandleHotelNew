@@ -44,7 +44,7 @@ namespace OlwandleHotel.Models
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Staff> Staffs { get; set; }
         public DbSet<RegisterAllViewModel> RegisterAllViewModel { get; set; }
-        public System.Data.Entity.DbSet<OlwandleHotel.Models.Event> Events { get; set; }
+        public DbSet<Event> Events { get; set; }
         public DbSet<Feedback> Feedbacks { get; set; }
 
         public DbSet<Reservation> reservations { get; set; }
@@ -64,9 +64,9 @@ namespace OlwandleHotel.Models
 
 
 
-        public System.Data.Entity.DbSet<OlwandleHotel.Models.GuestDetails> GuestDetails { get; set; }
+        public DbSet<GuestDetails> GuestDetails { get; set; }
 
-        public System.Data.Entity.DbSet<OlwandleHotel.Models.ViewModel> ViewModels { get; set; }
+        public DbSet<ViewModel> ViewModels { get; set; }
 
         public System.Data.Entity.DbSet<OlwandleHotel.Models.Description> Descriptions { get; set; }
 
@@ -82,10 +82,10 @@ namespace OlwandleHotel.Models
 
         public System.Data.Entity.DbSet<OlwandleHotel.Models.Cruise> Cruises { get; set; }
 
-        public System.Data.Entity.DbSet<OlwandleHotel.Models.Tour> Tours { get; set; }
+        public DbSet<Tour> Tours { get; set; }
 
-        public System.Data.Entity.DbSet<OlwandleHotel.Models.Quote> Quotes { get; set; }
+        public DbSet<Quote> Quotes { get; set; }
 
-        public System.Data.Entity.DbSet<OlwandleHotel.Models.PayPalModel> PayPalModels { get; set; }
+        public DbSet<PayPalModel> PayPalModels { get; set; }
     }
 }

@@ -42,7 +42,7 @@
             @Html.DisplayFor(model => model.SeatType)
         </dd>
 
-        <dt>
+        @*<dt>
             @Html.DisplayNameFor(model => model.FirstName)
         </dt>
 
@@ -64,7 +64,7 @@
 
         <dd>
             @Html.DisplayFor(model => model.Email)
-        </dd>
+        </dd>*@
 
         <dt>
             @Html.DisplayNameFor(model => model.Departure_Date)
@@ -162,7 +162,7 @@
             @Html.DisplayFor(model => model.Num_Pass)
         </dd>
 
-        <dt>
+        @*<dt>
             @Html.DisplayNameFor(model => model.Add_Flight_Delay)
         </dt>
 
@@ -184,10 +184,10 @@
 
         <dd>
             @Html.DisplayFor(model => model.SEAT)
-        </dd>
+        </dd>*@
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("viewofvalidate", "viewofvalidate", null, new { @class = "btn btn-primary btn-large" })
+    @Html.ActionLink("guestDetails", "guestDetails", null, new { @class = "btn btn-primary btn-large" })
 </p>
