@@ -9,6 +9,8 @@
 
 </head>
 <body>
+
+
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -22,11 +24,17 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Quotes", "Create", "Quotes")</li>
+                    <li>@Html.ActionLink("Flights Reservation", "Create", "Flights")</li>
                     <li>@Html.ActionLink("Room Reservation", "AllRooms", "Rooms")</li>
+                    <li>@Html.ActionLink("Tours Reservation", "Create", "Tours")</li>
+                    <li>@Html.ActionLink("Cruises Reservation", "Create", "Cruises")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
+
+
     </div>
     <div class="container body-content">
         @RenderBody()

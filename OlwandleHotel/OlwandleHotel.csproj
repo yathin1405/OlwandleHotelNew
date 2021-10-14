@@ -1075,6 +1075,7 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <None Include="Properties\PublishProfiles\ParadiseTravels - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
